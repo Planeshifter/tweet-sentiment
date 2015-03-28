@@ -1,0 +1,36 @@
+{
+  "name": "tweet-sentiment",
+  "version": "0.1.0",
+  "description": "SVM Classifier to Detect Sentiment of Tweets",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Planeshifter/tweet-sentiment.git"
+  },
+  "keywords": [
+    "sentiment-analysis",
+    "tweets",
+    "twitter",
+    "social-media",
+    "NLP",
+    "text-mining"
+  ],
+  "author": "Philipp Burckhardt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Planeshifter/tweet-sentiment/issues"
+  },
+  "homepage": "https://github.com/Planeshifter/tweet-sentiment",
+  "dependencies": {
+    "ramda": "^0.13.0"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "jshint": "^2.6.3",
+    "jshint-stylish": "^1.0.1",
+    "mocha": "^2.2.1"
+  }
+}
