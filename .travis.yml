@@ -5,6 +5,7 @@ node_js:
     - "0.10"
     - "iojs"
 before_install:
+    - sudo apt-get install unrar
     - npm update -g npm
 after_script:
     - npm run coveralls
