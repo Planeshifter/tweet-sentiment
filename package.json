@@ -25,9 +25,12 @@
   },
   "homepage": "https://github.com/Planeshifter/tweet-sentiment",
   "dependencies": {
+    "plus_arrays": "^0.1.5",
+    "pos": "^0.1.9",
     "ramda": "^0.13.0"
   },
   "devDependencies": {
+    "babel": "^4.7.16",
     "chai": "^2.2.0",
     "jshint": "^2.6.3",
     "jshint-stylish": "^1.0.1",
