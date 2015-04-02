@@ -4,7 +4,9 @@
   "description": "SVM Classifier to Detect Sentiment of Tweets",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "./node_modules/.bin/mocha",
+    "test-cov": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coveralls/coverage --report lcovonly -- -R spec && cat ./reports/coveralls/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./reports/coveralls"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   },
   "homepage": "https://github.com/Planeshifter/tweet-sentiment",
   "dependencies": {
+    "emotional-emoticons": "0.0.1",
     "plus_arrays": "^0.1.5",
     "pos": "^0.1.9",
     "ramda": "^0.13.0"
