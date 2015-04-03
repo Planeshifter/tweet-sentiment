@@ -5,8 +5,8 @@
 
 # tweet-sentiment
 
-> SVM Classifier to Detect Sentiment of Tweets. The package implements the procedure described in  by Saif M. Mohammad, Svetlana Kiritchenko, and Xiaodan Zhu ["NRC-Canada: Building the State-of-the-Art in
-Sentiment Analysis of Tweets"](http://www.umiacs.umd.edu/~saif/WebDocs/sentimentMKZ.pdf)
+> SVM Classifier to Detect Sentiment of Tweets. The package implements the procedure described in ["NRC-Canada: Building the State-of-the-Art in the paper
+Sentiment Analysis of Tweets"](http://www.umiacs.umd.edu/~saif/WebDocs/sentimentMKZ.pdf) by Saif M. Mohammad, Svetlana Kiritchenko, and Xiaodan Zhu
 
 [npm-image]: https://badge.fury.io/js/tweet-sentiment.svg
 [npm-url]: http://badge.fury.io/js/tweet-sentiment
