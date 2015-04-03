@@ -28,10 +28,13 @@
   },
   "homepage": "https://github.com/Planeshifter/tweet-sentiment",
   "dependencies": {
+    "csv-parse": "^0.1.0",
+    "e": "0.0.4",
     "emotional-emoticons": "0.0.1",
     "plus_arrays": "^0.1.5",
     "pos": "^0.1.9",
-    "ramda": "^0.13.0"
+    "ramda": "^0.13.0",
+    "svm": "^0.1.1"
   },
   "devDependencies": {
     "babel": "^4.7.16",
