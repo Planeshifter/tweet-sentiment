@@ -31,6 +31,7 @@
     "csv-parse": "^0.1.0",
     "e": "0.0.4",
     "emotional-emoticons": "0.0.1",
+    "node-svm": "^2.1.4",
     "plus_arrays": "^0.1.5",
     "pos": "^0.1.9",
     "ramda": "^0.13.0",

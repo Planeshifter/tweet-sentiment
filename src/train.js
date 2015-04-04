@@ -1,27 +1,30 @@
 'use strict';
 
 const fs = require( 'fs' );
-const svmjs = require( 'svm' );
-const parse = require( 'csv-parse' );
+const svm = require( 'node-svm' );
 const _ = require( 'lodash' );
 const util = require( 'util' );
 
-const processTweet = require( './index' );
+var data = require( '../model/data' );
 
-var svm = new svmjs.SVM();
-
-var sentiments = [];
-var features = [];
-var str = fs.readFileSync( __dirname + '/../data/econTweets.csv' );
-parse(str, { delimiter: ',' }, function(err, output){
-    output.forEach( (line, index) => {
-            sentiments.push( line[1] );
-            features.push(  _.values( processTweet(line[3]) ) );
-            console.log( index );
-    });
-    sentiments = sentiments.map( (x) => x > 0 ? 1 : -1);
-    svm.train(features, sentiments, {C: 1e3, numpasses: 15 });
-    var json = svm.toJSON();
-    console.log( util.inspect(json) );
-    fs.writeFileSync( __dirname + '/../model/model.json', JSON.stringify(json) );
+var dataset = data.features.map( (e, i) => {
+    var o = [];
+    o[0] = e;
+    o[1] = data.sentiments[i];
+    return o;
 });
+
+var clf = new svm.CSVC({
+    kernelType: 'linear',
+    probability: true,
+    c:[0.005, 0.01,0.125,0.5,1,2]
+});
+
+clf.train(dataset)
+    .progress( function( rate ) {
+        console.log( rate );
+    })
+    .spread( (trainedModel, trainingReport) => {
+        console.log(trainingReport);
+        fs.writeFileSync( __dirname + '/../model/model.json', JSON.stringify(trainedModel) );
+    });

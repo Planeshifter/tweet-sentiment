@@ -1,12 +1,11 @@
 'use strict';
 
 const _ = require( 'lodash' );
-const svmjs = require( 'svm' );
+const svm = require( 'node-svm' );
 const processTweet = require( './getFeatures.js' );
 
-var json = require( '../model/model.json' );
-var svm = new svmjs.SVM();
-svm.fromJSON(json);
+var model = require( '../model/model.json' );
+var classifier = svm.restore(model);
 
 function predict( tweet ) {
     var testdata;
@@ -15,7 +14,7 @@ function predict( tweet ) {
     } else {
         testdata = [].push( tweet );
     }
-    return svm.predict(testdata);
+    return testdata.map( (x) => classifier.predictProbabilitiesSync(x) );
 }
 
 module.exports =  exports = predict;
