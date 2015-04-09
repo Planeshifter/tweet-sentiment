@@ -6,7 +6,6 @@ node_js:
     - "iojs"
 before_install:
     - sudo apt-get install unrar
-    - npm update -g npm
     - make download
 after_script:
     - npm run coveralls
