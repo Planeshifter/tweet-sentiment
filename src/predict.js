@@ -14,7 +14,7 @@ function predict( tweet ) {
     } else {
         testdata = [].push( tweet );
     }
-    return testdata.map( (x) => classifier.predictProbabilitiesSync(x) );
+    return testdata.map( (x) => classifier.predictSync(x) );
 }
 
 module.exports =  exports = predict;
