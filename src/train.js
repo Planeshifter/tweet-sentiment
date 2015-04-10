@@ -4,6 +4,7 @@ const fs = require( 'fs' );
 const svm = require( 'node-svm' );
 const _ = require( 'lodash' );
 const util = require( 'util' );
+const path = require( 'path' );
 
 var data = require( '../model/data' );
 
