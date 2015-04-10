@@ -4,21 +4,22 @@ const R = require( 'ramda' );
 const _ = require( 'lodash' );
 const pos = require( 'pos' );
 const emotions = require( 'emotional-emoticons' );
+const path = require( 'path' );
 require( 'plus_arrays' );
 
 const fs = require( 'fs' );
 
 const bingLiuLexicon = {
-    positive: fs.readFileSync( __dirname + '/../data/positive-words.txt').toString().split( '\n' ).filter( (w, i) => i > 34),
-    negative: fs.readFileSync( __dirname + '/../data/negative-words.txt').toString().split( '\n' ).filter( (w, i) => i > 34)
+    positive: fs.readFileSync( path.normalize( __dirname + '/../data/positive-words.txt' ) ).toString().split( '\n' ).filter( (w, i) => i > 34),
+    negative: fs.readFileSync( path.normalize( __dirname + '/../data/negative-words.txt') ).toString().split( '\n' ).filter( (w, i) => i > 34)
 };
 
-const sentiment140Lexicon = fs.readFileSync( __dirname + '/../data/Sentiment140-Lexicon-v0.1/unigrams-pmilexicon.txt' )
+const sentiment140Lexicon = fs.readFileSync( path.normalize( __dirname + '/../data/Sentiment140-Lexicon-v0.1/unigrams-pmilexicon.txt' ) )
     .toString()
     .split( '\n' )
     .map( e => e.split( '\t' ));
 
-const hashtagSentimentLexicon = fs.readFileSync( __dirname + '/../data/NRC-Hashtag-Sentiment-Lexicon-v0.1/unigrams-pmilexicon.txt' )
+const hashtagSentimentLexicon = fs.readFileSync( path.normalize( __dirname + '/../data/NRC-Hashtag-Sentiment-Lexicon-v0.1/unigrams-pmilexicon.txt' ) )
     .toString()
     .split( '\n' )
     .map( e => e.split( '\t' ));
