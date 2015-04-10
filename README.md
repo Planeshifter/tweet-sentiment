@@ -8,6 +8,31 @@
 > SVM Classifier to Detect Sentiment of Tweets. The package implements the procedure described in ["NRC-Canada: Building the State-of-the-Art in the paper
 Sentiment Analysis of Tweets"](http://www.umiacs.umd.edu/~saif/WebDocs/sentimentMKZ.pdf) by Saif M. Mohammad, Svetlana Kiritchenko, and Xiaodan Zhu
 
+## Installation
+
+The tool should be installed globally such that it can be invoked from any directory in the terminal via the command tweet-sentiment.
+
+```
+npm install tweet-sentiment -g
+```
+
+## Getting Started
+
+After installation, it is possible to obtain help about the possible options of the program by typing
+
+```
+tweet-sentiment --help
+```
+
+## Command Line Interface
+
+### tweet-sentiment predict [options] \<file\>
+
+First Header  | Second Header
+------------- | -------------
+-h, --help            | output usage information
+-o, --output [value]  | Name of output file
+
 [npm-image]: https://badge.fury.io/js/tweet-sentiment.svg
 [npm-url]: http://badge.fury.io/js/tweet-sentiment
 
