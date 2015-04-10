@@ -13,9 +13,6 @@
 reports/
 test/
 
-!data/Makefile
-data/
-
 # Node.js #
 ###########
 .npmignore
@@ -24,3 +21,8 @@ data/
 # Logs #
 ########
 *.log
+
+# CSV #
+#######
+
+*.csv
