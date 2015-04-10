@@ -26,5 +26,5 @@ clf.train(dataset)
     })
     .spread( (trainedModel, trainingReport) => {
         console.log(trainingReport);
-        fs.writeFileSync( __dirname + '/../model/model.json', JSON.stringify(trainedModel) );
+        fs.writeFileSync( path.normalize( __dirname + '/../model/model.json' ), JSON.stringify(trainedModel) );
     });

@@ -3,8 +3,9 @@
 const _ = require( 'lodash' );
 const svm = require( 'node-svm' );
 const processTweet = require( './getFeatures.js' );
+const path = require( 'path' );
 
-var model = require( __dirname + '/../model/model.json' );
+var model = require( path.normalize( __dirname + '/../model/model.json' ) );
 var classifier = svm.restore(model);
 
 function predict( tweet ) {

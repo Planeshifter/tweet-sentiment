@@ -24,7 +24,7 @@ const hashtagSentimentLexicon = fs.readFileSync( path.normalize( __dirname + '/.
     .split( '\n' )
     .map( e => e.split( '\t' ));
 
-var emotionLexicon = fs.readFileSync( __dirname + '/../data/NRC-Emotion-Lexicon-v0.92/NRC-emotion-lexicon-wordlevel-alphabetized-v0.92.txt' )
+var emotionLexicon = fs.readFileSync( path.normalize( __dirname + '/../data/NRC-Emotion-Lexicon-v0.92/NRC-emotion-lexicon-wordlevel-alphabetized-v0.92.txt' ) )
     .toString()
     .split( '\n' )
     .map( e => e.split( '\t' ))

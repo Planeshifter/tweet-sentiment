@@ -3,12 +3,13 @@
 const fs = require( 'fs' );
 const parse = require( 'csv-parse' );
 const _ = require( 'lodash' );
+const path = require( 'path' );
 
 const processTweet = require( './getFeatures' );
 
 var sentiments = [];
 var features = [];
-var str = fs.readFileSync( __dirname + '/../data/econTweets.csv' );
+var str = fs.readFileSync( path.normalize( __dirname + '/../data/econTweets.csv' ) );
 parse(str, { delimiter: ',' }, function(err, output){
     output.forEach( (line, index) => {
             sentiments.push( line[1] );
@@ -22,6 +23,6 @@ parse(str, { delimiter: ',' }, function(err, output){
         sentiments: sentiments
     };
 
-    fs.writeFileSync( __dirname + '/../model/data.json', JSON.stringify(o) );
+    fs.writeFileSync( path.normalize( __dirname + '/../model/data.json' ), JSON.stringify(o) );
 
 });
