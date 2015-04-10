@@ -12,6 +12,8 @@
 ###############
 reports/
 test/
+
+!data/Makefile
 data/
 
 # Node.js #
