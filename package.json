@@ -1,6 +1,6 @@
 {
   "name": "tweet-sentiment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SVM Classifier to Detect Sentiment of Tweets",
   "main": "lib/index.js",
   "preferGlobal": "true",
