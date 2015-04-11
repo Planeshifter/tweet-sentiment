@@ -14,5 +14,7 @@ download:
 clean-data:
 	$(MAKE) -C data clean
 
+print-%:
+	@echo $*=$($*)
 
-.PHONY: clean, all, download
+.PHONY: all, clean, clean-data, download, print-%
