@@ -1,5 +1,5 @@
 {
-  "name": "tweet-sentiment",
+  "name": "@planeshifter/tweet-sentiment",
   "version": "0.2.5",
   "description": "SVM Classifier to Detect Sentiment of Tweets",
   "main": "lib/index.js",
